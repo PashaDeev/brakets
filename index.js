@@ -3,6 +3,7 @@ const closeBrackets = [')', '>', ']'];
 
 const testStringTrue = "(())";
 const testStringFalse = "(()";
+const testIncorrect = "))((";
 const testDifTrue = "(<some>)[]";
 const testDifFalse = "(some)[<]";
 
@@ -30,5 +31,6 @@ const check = currentString => {
 
 console.log('correct', check(testStringTrue));
 console.log('incorrect', check(testStringFalse));
+console.log('test incorrect', check(testIncorrect));
 console.log('correct diff', check(testDifTrue));
 console.log('incorrect diff', check(testDifFalse));
